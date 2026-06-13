@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace JustinKluever\DiscordWebhookBuilder\Concerns\Support;
 
 use BackedEnum;
