@@ -206,7 +206,7 @@ class Webhook implements JsonSerializable, Stringable
 
     /**
      * allowed mentions for the message, **will mention user ids by default**
-     * 
+     *
      * Use {@see AllowedMentions::none()} to suppress all default mentions.
      */
     public function allowedMentions(AllowedMentions $allowedMentions): static
