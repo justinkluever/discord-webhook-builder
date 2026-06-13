@@ -1,0 +1,77 @@
+{
+    "name": "justinkluever/discord-webhook-builder",
+    "description": "a simple and fluent builder for discord webhook messages with embeds or components v2",
+    "keywords": [
+        "php",
+        "dto",
+        "embed",
+        "fluent",
+        "payload",
+        "builder",
+        "discord",
+        "webhook",
+        "component",
+        "notification",
+        "components-v2",
+        "discord-webhook"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justin Klüver",
+            "email": "justin@kluever.info"
+        }
+    ],
+    "homepage": "https://github.com/justinkluever/discord-webhook-builder",
+    "support": {
+        "issues": "https://github.com/justinkluever/discord-webhook-builder/issues",
+        "source": "https://github.com/justinkluever/discord-webhook-builder"
+    },
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "laravel/pint": "^v1.29.1",
+        "pestphp/pest": "^4.7.3",
+        "pestphp/pest-plugin-arch": "^4.0.2",
+        "pestphp/pest-plugin-type-coverage": "^4.0.4",
+        "phpstan/phpstan": "^2.2.2",
+        "rector/rector": "^2.4.5",
+        "symfony/var-dumper": "^8.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JustinKluever\\DiscordWebhookBuilder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "lint": "pint",
+        "refactor": "rector",
+        "test:type-coverage": "pest --type-coverage --exactly=100",
+        "test:lint": "pint --test",
+        "test:unit": "pest --coverage --min=0",
+        "test:types": "phpstan",
+        "test:refactor": "rector --dry-run",
+        "test": [
+            "@test:lint",
+            "@test:type-coverage",
+            "@test:unit",
+            "@test:types",
+            "@test:refactor"
+        ]
+    }
+}
