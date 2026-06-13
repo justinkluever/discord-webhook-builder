@@ -1,0 +1,9 @@
+parameters:
+    level: max
+    paths:
+        - src
+
+    reportUnmatchedIgnoredErrors: true
+
+    # we cant assume caller follows the rules anyway
+    treatPhpDocTypesAsCertain: false
